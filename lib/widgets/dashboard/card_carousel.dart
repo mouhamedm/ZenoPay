@@ -32,7 +32,7 @@ class _CardCarouselState extends State<CardCarousel> {
 
     return Column(
       children: [
-        // -- Card PageView --
+        // Card PageView
         SizedBox(
           height: 200,
           child: PageView.builder(
@@ -56,7 +56,7 @@ class _CardCarouselState extends State<CardCarousel> {
           ),
         ),
         const SizedBox(height: 16),
-        // -- Page indicator dots --
+        // Page indicator dots
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(provider.cards.length, (i) {

@@ -64,7 +64,6 @@ class _PinScreenState extends State<PinScreen> with SingleTickerProviderStateMix
     if (success) {
       Navigator.of(context).pushReplacementNamed('/dashboard');
     } else {
-      // Clear PIN on error so the user can try again
       setState(() {
         _currentPin = '';
       });
@@ -116,7 +115,7 @@ class _PinScreenState extends State<PinScreen> with SingleTickerProviderStateMix
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(width: 72, height: 72), // Empty space placeholder for alignment
+            const SizedBox(width: 72, height: 72),
             _buildNumpadButton('0'),
             _buildActionNumpadButton(
               icon: Icons.backspace_rounded,
@@ -182,7 +181,7 @@ class _PinScreenState extends State<PinScreen> with SingleTickerProviderStateMix
             child: Column(
               children: [
                 const Spacer(flex: 2),
-                // -- Header --
+                // Header
                 Center(
                   child: Container(
                     width: 64,
@@ -199,7 +198,7 @@ class _PinScreenState extends State<PinScreen> with SingleTickerProviderStateMix
                   child: Text('Saisissez votre PIN', style: AppTextStyles.displayMedium),
                 ),
                 const SizedBox(height: 48),
-                // -- Indicators --
+                // Indicators
                 if (isLoading)
                   const SizedBox(
                     height: 16,
@@ -209,7 +208,7 @@ class _PinScreenState extends State<PinScreen> with SingleTickerProviderStateMix
                 else
                   _buildPinIndicators(),
                 const Spacer(flex: 2),
-                // -- Custom Numpad --
+                // Custom Numpad
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: _buildNumpad(),

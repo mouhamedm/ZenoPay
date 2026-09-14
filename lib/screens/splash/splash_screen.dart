@@ -33,7 +33,6 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    // 3 seconds total for the splash screen
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 3000),
@@ -56,10 +55,10 @@ class _SplashScreenState extends State<SplashScreen>
     // Generate 30 flying money particles
     _particles = List.generate(30, (index) {
       return _Particle(
-        _random.nextDouble() * 2 - 1, // X position: -1.0 to 1.0
-        _random.nextDouble() * 0.8, // Delay: starts between 0% and 80% of timeline
-        0.4 + _random.nextDouble() * 0.4, // Duration: takes 40% to 80% of timeline to cross screen
-        0.5 + _random.nextDouble() * 0.8, // Scale: random sizes
+        _random.nextDouble() * 2 - 1,
+        _random.nextDouble() * 0.8, 
+        0.4 + _random.nextDouble() * 0.4, 
+        0.5 + _random.nextDouble() * 0.8, 
         _emojis[_random.nextInt(_emojis.length)],
       );
     });
@@ -86,7 +85,7 @@ class _SplashScreenState extends State<SplashScreen>
         color: AppColors.background,
         child: Stack(
           children: [
-            // -- Background glow --
+            // Background glow
             Center(
               child: Container(
                 width: 350,
@@ -103,7 +102,7 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
 
-            // -- Flying Money Particles --
+            // Flying Money Particles
             ..._particles.map((p) {
               return AnimatedBuilder(
                 animation: _controller,
@@ -115,10 +114,8 @@ class _SplashScreenState extends State<SplashScreen>
                     return const SizedBox.shrink();
                   }
 
-                  // Calculate Y position (starts below screen (1.2) to above screen (-1.2))
                   double yPos = 1.2 - (progress * 2.4);
 
-                  // Opacity fade in and fade out
                   double opacity = 1.0;
                   if (progress < 0.2) opacity = progress / 0.2;
                   if (progress > 0.8) opacity = (1.0 - progress) / 0.2;
@@ -137,7 +134,7 @@ class _SplashScreenState extends State<SplashScreen>
               );
             }),
 
-            // -- Zeno Pay Text & Progress Bar --
+            // Zeno Pay Text & Progress Bar
             Center(
               child: AnimatedBuilder(
                 animation: _controller,
@@ -164,7 +161,6 @@ class _SplashScreenState extends State<SplashScreen>
                             ),
                           ),
                           const SizedBox(height: 32),
-                          // Adjusted width progress bar
                           SizedBox(
                             width: 120,
                             child: ClipRRect(

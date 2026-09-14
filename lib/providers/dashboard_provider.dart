@@ -22,7 +22,7 @@ class DashboardProvider extends ChangeNotifier {
 
   VisaCardModel get activeCard => _cards[_activeCardIndex];
 
-  // -- Card interactions --
+  // Card interactions
   void setActiveCard(int index) {
     if (_activeCardIndex != index) {
       _activeCardIndex = index;
@@ -45,7 +45,7 @@ class DashboardProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // -- Bottom nav --
+  // Bottom nav
   void setActiveNav(int index) {
     if (_activeNavIndex != index) {
       _activeNavIndex = index;

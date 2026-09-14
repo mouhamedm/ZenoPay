@@ -95,7 +95,7 @@ class _VisaCardWidgetState extends State<VisaCardWidget> with SingleTickerProvid
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // -- Top row --
+              // Top row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -115,7 +115,7 @@ class _VisaCardWidgetState extends State<VisaCardWidget> with SingleTickerProvid
                 ],
               ),
               const Spacer(),
-              // -- Card number --
+              // Card number
               AnimatedSwitcher(
                 duration: const Duration(milliseconds: 400),
                 transitionBuilder: (child, anim) => FadeTransition(
@@ -132,7 +132,7 @@ class _VisaCardWidgetState extends State<VisaCardWidget> with SingleTickerProvid
                 ),
               ),
               const SizedBox(height: 20),
-              // -- Bottom row --
+              // Bottom row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -152,7 +152,7 @@ class _VisaCardWidgetState extends State<VisaCardWidget> with SingleTickerProvid
                       Text(widget.card.expiryDate, style: AppTextStyles.cardValue),
                     ],
                   ),
-                  // -- CVV only visible when revealed --
+                  // CVV only visible when revealed
                   AnimatedOpacity(
                     opacity: widget.revealed ? 1.0 : 0.0,
                     duration: const Duration(milliseconds: 300),
@@ -165,7 +165,7 @@ class _VisaCardWidgetState extends State<VisaCardWidget> with SingleTickerProvid
                       ],
                     ),
                   ),
-                  // -- Card type logo --
+                  // Card type logo
                   _CardTypeBadge(type: widget.card.cardType),
                 ],
               ),
@@ -209,7 +209,7 @@ class _CardTypeBadge extends StatelessWidget {
         ],
       );
     }
-    // -- Visa text logo --
+    // Visa text logo
     return Text(
       'VISA',
       style: AppTextStyles.cardValue.copyWith(

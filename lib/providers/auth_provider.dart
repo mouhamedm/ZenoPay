@@ -13,13 +13,12 @@ class AuthProvider extends ChangeNotifier {
   String get phoneNumber => _phoneNumber;
   bool get isAuthenticated => _isAuthenticated;
 
-  // -- Signup flow (Phone only) --
+  // Signup flow
   Future<bool> signUp(String phone) async {
     _status = AuthStatus.loading;
     _phoneNumber = phone;
     notifyListeners();
 
-    // Simulate network call
     await Future.delayed(const Duration(milliseconds: 1800));
 
     _status = AuthStatus.success;
@@ -27,14 +26,13 @@ class AuthProvider extends ChangeNotifier {
     return true;
   }
 
-  // -- OTP verification --
+  // OTP verification
   Future<bool> verifyOtp(String otp) async {
     _status = AuthStatus.loading;
     notifyListeners();
 
     await Future.delayed(const Duration(milliseconds: 1500));
 
-    // Accept any 6-digit code or the fixed code "123456"
     final isValid = otp.length == 6 && RegExp(r'^\d+$').hasMatch(otp);
     if (isValid) {
       _status = AuthStatus.success;
@@ -46,14 +44,13 @@ class AuthProvider extends ChangeNotifier {
     return isValid;
   }
 
-  // -- PIN Login flow --
+  // PIN Login flow
   Future<bool> loginWithPin(String pin) async {
     _status = AuthStatus.loading;
     notifyListeners();
 
     await Future.delayed(const Duration(milliseconds: 1500));
 
-    // Accept any 6-digit PIN in mock
     final isValid = pin.length == 6 && RegExp(r'^\d+$').hasMatch(pin);
     if (isValid) {
       _status = AuthStatus.success;
@@ -68,9 +65,9 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  // -- Legacy Login flow (unused in new flow) --
+  // Legacy Login flow
   Future<bool> login(String phone, String password) async {
-    return true; // Dummy to keep compilation alive
+    return true;
   }
 
   void resetStatus() {

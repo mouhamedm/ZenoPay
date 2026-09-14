@@ -37,7 +37,7 @@ class TransactionTile extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // -- Category icon --
+          // Category icon
           Container(
             width: 46,
             height: 46,
@@ -48,7 +48,7 @@ class TransactionTile extends StatelessWidget {
             child: Icon(transaction.icon, color: _categoryColor, size: 22),
           ),
           const SizedBox(width: 14),
-          // -- Title & subtitle --
+          // Title & subtitle
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +70,7 @@ class TransactionTile extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          // -- Amount & date --
+          // Amount & date
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [

@@ -73,7 +73,7 @@ class AppTextStyles {
         color: AppColors.textSecondary,
       );
 
-  // -- Card-specific styles (white on dark card) --
+  // Card-specific styles
   static TextStyle get cardNumber => GoogleFonts.spaceGrotesk(
         fontSize: 18,
         fontWeight: FontWeight.w500,

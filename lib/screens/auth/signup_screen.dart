@@ -68,15 +68,15 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 48),
-                    // -- Header --
+                    // Header
                     _buildHeader(),
                     const SizedBox(height: 48),
-                    // -- Form fields --
+                    // Form fields
                     Text('Numéro de téléphone', style: AppTextStyles.labelMedium),
                     const SizedBox(height: 8),
                     PhoneInputField(onChanged: (val) => _fullPhone = val),
                     const SizedBox(height: 40),
-                    // -- Signup button --
+                    // Signup button
                     _GradientButton(
                       label: "Continuer",
                       isLoading: isLoading,
@@ -97,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // -- Logo --
+        // Logo
         Container(
           width: 52,
           height: 52,
@@ -128,7 +128,7 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
   }
 }
 
-// -- Reusable gradient button --
+// Reusable gradient button
 class _GradientButton extends StatelessWidget {
   final String label;
   final bool isLoading;

@@ -1,5 +1,5 @@
 class Validators {
-  // -- Phone validation --
+  // Phone validation
   static String? validatePhone(String? value) {
     if (value == null || value.isEmpty) {
       return 'Veuillez entrer votre numéro de téléphone';
@@ -11,7 +11,7 @@ class Validators {
     return null;
   }
 
-  // -- Password validation --
+  // Password validation
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Veuillez créer un mot de passe';
@@ -29,7 +29,7 @@ class Validators {
     return null;
   }
 
-  // -- OTP validation --
+  // OTP validation
   static bool isOtpComplete(String otp, {int length = 6}) {
     return otp.length == length && RegExp(r'^\d+$').hasMatch(otp);
   }

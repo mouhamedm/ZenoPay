@@ -57,14 +57,14 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
 
     return CustomScrollView(
       slivers: [
-        // -- App bar --
+        // App bar
         SliverToBoxAdapter(child: _buildAppBar(provider)),
-        // -- Balance section --
+        // Balance section
         SliverToBoxAdapter(child: _buildBalanceSection(provider)),
-        // -- Card carousel --
+        // Card carousel
         const SliverToBoxAdapter(child: CardCarousel()),
         const SliverToBoxAdapter(child: SizedBox(height: 28)),
-        // -- Quick actions --
+        // Quick actions
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -72,7 +72,7 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
           ),
         ),
         const SliverToBoxAdapter(child: SizedBox(height: 28)),
-        // -- Transactions header --
+        // Transactions header
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -89,7 +89,7 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
           ),
         ),
         const SliverToBoxAdapter(child: SizedBox(height: 16)),
-        // -- Transaction list --
+        // Transaction list
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 120),
           sliver: SliverList(
@@ -109,7 +109,7 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Avatar Profile at the left
+          // Avatar Profile
           Container(
             width: 44,
             height: 44,
@@ -124,7 +124,7 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
               size: 24,
             ),
           ),
-          // Notification at the right
+          // Notification
           _AppBarIcon(icon: Icons.notifications_outlined, onTap: () {}),
         ],
       ),
@@ -144,7 +144,7 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // -- Animated count-up balance --
+                // Animated count-up balance
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 300),
                   child: Text(

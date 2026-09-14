@@ -19,7 +19,7 @@ class DashboardScreen extends StatelessWidget {
       extendBody: true,
       body: Stack(
         children: [
-          // -- Background glow --
+          // Background glow
           Positioned(
             top: -60,
             right: -60,
@@ -48,7 +48,7 @@ class DashboardScreen extends StatelessWidget {
             ),
           ),
           
-          // -- Floating bottom nav --
+          // Floating bottom nav
           Positioned(
             bottom: 0,
             left: 0,

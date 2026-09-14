@@ -90,10 +90,10 @@ class _LoginScreenState extends State<LoginScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 48),
-                    // -- Header --
+                    // Header
                     _buildHeader(),
                     const SizedBox(height: 48),
-                    // -- Phone --
+                    // Phone
                     Text(
                       'Numéro de téléphone',
                       style: AppTextStyles.labelMedium,
@@ -101,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen>
                     const SizedBox(height: 8),
                     PhoneInputField(onChanged: (val) => _fullPhone = val),
                     const SizedBox(height: 24),
-                    // -- Password --
+                    // Password
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -129,14 +129,14 @@ class _LoginScreenState extends State<LoginScreen>
                       },
                     ),
                     const SizedBox(height: 40),
-                    // -- Login button --
+                    // Login button
                     _GradientButton(
                       label: 'Se connecter',
                       isLoading: isLoading,
                       onTap: isLoading ? null : _handleLogin,
                     ),
                     const SizedBox(height: 32),
-                    // -- Signup link --
+                    // Signup link
                     Center(
                       child: GestureDetector(
                         onTap: () => Navigator.of(

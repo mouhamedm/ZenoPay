@@ -40,7 +40,7 @@ class CustomBottomNav extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                // -- Sliding active pill --
+                // Sliding active pill
                 AnimatedAlign(
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.easeOutCubic,
@@ -63,7 +63,7 @@ class CustomBottomNav extends StatelessWidget {
                     ),
                   ),
                 ),
-                // -- Nav items --
+                // Nav items
                 Row(
                   children: List.generate(items.length, (i) {
                     final isActive = i == provider.activeNavIndex;

@@ -72,7 +72,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
       setState(() {
         _isVerified = true;
       });
-      // Wait a moment so the user sees the checkmark animation
       Future.delayed(const Duration(milliseconds: 800), () {
         if (mounted) Navigator.of(context).pushReplacementNamed('/pin');
       });
@@ -132,7 +131,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
                     ),
                   ),
                   const SizedBox(height: 52),
-                  // -- OTP input --
+                  // OTP input
                   Center(
                     child: OtpInputField(
                       onCompleted: (otp) => setState(() => _currentOtp = otp),
@@ -140,7 +139,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
                     ),
                   ),
                   const SizedBox(height: 48),
-                  // -- Verify button --
+                  // Verify button
                   _GradientButton(
                     label: 'Vérifier',
                     isLoading: isLoading,
@@ -149,7 +148,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
                     onTap: isLoading ? null : _handleVerify,
                   ),
                   const SizedBox(height: 32),
-                  // -- Resend countdown --
+                  // Resend countdown
                   Center(
                     child: _canResend
                         ? GestureDetector(

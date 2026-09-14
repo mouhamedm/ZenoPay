@@ -3,7 +3,7 @@ import '../models/transaction_model.dart';
 import '../theme/app_colors.dart';
 
 class MockData {
-  // -- Visa cards --
+  // Visa cards
   static List<VisaCardModel> get cards => [
         VisaCardModel(
           cardholderName: 'Koné Moussa',
@@ -32,7 +32,7 @@ class MockData {
         ),
       ];
 
-  // -- Transactions --
+  // Transactions
   static List<TransactionModel> get transactions => [
         TransactionModel(
           id: 't1',
