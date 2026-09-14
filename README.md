@@ -37,4 +37,3 @@ A **next-generation digital wallet & financial management mobile application** b
   <img src="assets/preview/preview3.png" width="380" alt="Zeno Pay Preview 3" />
   <img src="assets/preview/preview4.png" width="380" alt="Zeno Pay Preview 4" />
 </p>
-# ZenoPay
