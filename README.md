@@ -29,11 +29,11 @@ A **next-generation digital wallet & financial management mobile application** b
 ## Preview
 
 <p align="center">
-  <img src="assets/preview/preview1.png" width="380" alt="Zeno Pay Preview 1" />
-  <img src="assets/preview/preview2.png" width="380" alt="Zeno Pay Preview 2" />
+  <img src="assets/preview/preview-1.png" width="380" alt="Zeno Pay Preview 1" />
+  <img src="assets/preview/preview-2.png" width="380" alt="Zeno Pay Preview 2" />
 </p>
 
 <p align="center">
-  <img src="assets/preview/preview3.png" width="380" alt="Zeno Pay Preview 3" />
-  <img src="assets/preview/preview4.png" width="380" alt="Zeno Pay Preview 4" />
+  <img src="assets/preview/preview-3.png" width="380" alt="Zeno Pay Preview 3" />
+  <img src="assets/preview/preview-4.png" width="380" alt="Zeno Pay Preview 4" />
 </p>
